@@ -1,4 +1,16 @@
-# 2/26/17 - Breadth First Search
+# 2/28/18 - Dynamic Programming
+
+Today I got to the dynamic programming section on LeetCode and thought I needed a refresher. After some googling and watching some CS Dojo, here is my summary of dynamic programming:
+
+## What is it?
+- A way of making your code more efficient by storing (also known as memoizing) intermediary results so you can access them later, instead of having to re-calculate the results all over again.
+
+## Example
+A good example of this is fibonacci sequence:
+
+(to be continued)
+
+# 2/26/18 - Breadth First Search
 
 Today I solved a problem called `Binary Tree Level Order Traversal` on LeetCode. The problem is defined as:
 
