@@ -1,14 +1,50 @@
 # 2/28/18 - Dynamic Programming
 
-Today I got to the dynamic programming section on LeetCode and thought I needed a refresher. After some googling and watching some CS Dojo, here is my summary of dynamic programming:
+Today I got to the dynamic programming section on LeetCode and thought I needed a refresher. After some googling and watching some CS Dojo, here is my understanding of dynamic programming:
 
 ## What is it?
-- A way of making your code more efficient by storing (also known as memoizing) intermediary results so you can access them later, instead of having to re-calculate the results all over again.
+- A way of making your code more efficient by storing (also known as memoizing) intermediate results so you can access them later, instead of having to re-calculate the results all over again.
 
 ## Example
-A good example of this is fibonacci sequence:
+A good example of this is fibonacci sequence, where given an input, n, you want to return the nth element of the fibonacci sequence:
+
+On one hand, you could solve it recursively like this:
+
+```
+def fib(n)
+  return 1 if n == 1
+  return 2 if n == 2
+
+  return fib(n - 2) + fib(n - 1)
+end
+```
+
+However this would result in a bunch of unnecessary recursive calls. For example, say n = 5. First, your function call fib(5) would need to call fib(3), which would need to call fib(2) and fib(1), both which return something and bubbles back up. Then your function would need to call fib(4), which would need to call fib(2), which returns something so bubbles back up, and then it would have to call fib(3) (notice this was already called before), which would need to call fib(2) and fib(1), both which return something and bubbles back up. Phew! As you can see, there's repetitive work being done here. This might be easier to understand if visualized as a tree:
+
+```
+        5
+      /   \
+    3       4
+   / \     / \
+  1   2   2   3
+             / \
+            1   2
+```
+
+Notice how there's a duplicate of the tree with a root of 3. It's duplicating the same exact work! So what if we just stored the result of fib(3) somewhere so it wouldn't ever need to be recalculated again? So when it ever has to call fib(3) again, it would immediately return the result instead of having to make further recursive calls. That way it would look like this:
+
+```
+        5
+      /   \
+    3       4
+   / \     / \
+  1   2   2   3
+```
+
+You may think, that doesn't look very different. However consider if the input was something greater, like 6. Without dynamic programming:
 
 (to be continued)
+
 
 # 2/26/18 - Breadth First Search
 
