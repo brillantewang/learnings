@@ -12,8 +12,7 @@ On one hand, you could solve it recursively like this:
 
 ```
 def fib(n)
-  return 1 if n == 1
-  return 2 if n == 2
+  return 1 if n == 1 || n == 2
 
   return fib(n - 2) + fib(n - 1)
 end
@@ -72,13 +71,13 @@ See the difference? This just gets even more pronounced as the input gets larger
 So what does this look like in code? We can either do this recursively and store the results in some sort of global variable:
 
 ```
-fibs = [0, 1, 1]
+$fibs = [0, 1, 1]
 
 def fib(n)
-  return fibs[n] if fibs[n]
+  return $fibs[n] if $fibs[n]
 
-  fibs[n] = fibs(n - 2) + fibs(n - 1)
-  fibs[n]
+  $fibs[n] = fib(n - 2) + fib(n - 1)
+  $fibs[n]
 end
 ```
 
@@ -98,6 +97,8 @@ def fib(n)
   fibs[n]
 end
 ```
+
+I tested out fib(50) without dynamic programming, and after 3 minutes of waiting I gave up and cancelled the function call. In contrast, I tried fib(50) with dynamic programming (both recursively and iteratively) and they both gave me the result (12586269025) immediately. The difference just gets more dramatic the larger the input. No wonder dynamic programming is so powerful!
 
 # 2/26/18 - Breadth First Search
 
