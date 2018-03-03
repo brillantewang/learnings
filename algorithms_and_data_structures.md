@@ -3,7 +3,7 @@
 Today I got to the dynamic programming section on LeetCode and thought I needed a refresher. After some googling and watching some CS Dojo, here is my understanding of dynamic programming:
 
 ## What is it?
-- A way of making your code more efficient by storing (also known as memoizing) intermediate results so you can access them later, instead of having to re-calculate the results all over again.
+A way of making your code more efficient by storing (also known as memoizing) intermediate results so you can access them later, instead of having to re-calculate the results all over again.
 
 ## Example
 A good example of this is fibonacci sequence, where given an input, n, you want to return the nth element of the fibonacci sequence:
@@ -43,8 +43,61 @@ Notice how there's a duplicate of the tree with a root of 3. It's duplicating th
 
 You may think, that doesn't look very different. However consider if the input was something greater, like 6. Without dynamic programming:
 
-(to be continued)
+```
+                    6
+                /       \
+              4           5
+            /   \       /   \
+           2     3     3     4
+                / \   / \   / \
+               1   2 1   2 2   3
+                              / \
+                             1   2
+```
 
+With dynamic programming:
+
+```
+                    6
+                /       \
+              4           5
+            /   \       /   \
+           2     3     3     4
+                / \        
+               1   2       
+```
+
+See the difference? This just gets even more pronounced as the input gets larger.
+
+So what does this look like in code? We can either do this recursively and store the results in some sort of global variable:
+
+```
+fibs = [0, 1, 1]
+
+def fib(n)
+  return fibs[n] if fibs[n]
+
+  fibs[n] = fibs(n - 2) + fibs(n - 1)
+  fibs[n]
+end
+```
+
+Or we can do this iteratively, what we call a `bottom-up` approach.
+
+```
+def fib(n)
+  return 1 if n == 1
+  return 2 if n == 2
+
+  fibs = [0, 1, 1]
+
+  (3..n).each do |curr_fib|
+    fibs[curr_fib] = fibs[curr_fib - 2] + fibs[curr_fib - 1]
+  end
+
+  fibs[n]
+end
+```
 
 # 2/26/18 - Breadth First Search
 
