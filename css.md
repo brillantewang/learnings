@@ -1,3 +1,17 @@
+# 3/10/18 - `Sprites`
+
+Learned a pretty cool way to boost performance using CSS Sprites today. Say you had a website that had a bunch of images. Well to load each of one those images it would normally have to make a separate HTTP request for each image. Making multiple requests can take a long time.
+
+To reduce the number of HTTP requests, you can create what's called a CSS Sprite. It's essentially just one large image file that consists of all of your other image files combined.
+
+So why on earth would anyone want to do that? It's so your website only has to make one HTTP request to get that large file (the CSS sprite). Then you can tailor each element to only display a certain part of the CSS sprite using CSS properties like `height` and `background-position`.
+
+It can be really tedious to individually tailor the CSS properties for every image element you want to display, so there are tools out there (like Spritepad) that help you build the sprite, and give you the corresponding CSS that you can just copy over!
+
+To me, this type of performance boost reminds me of using eager loading to avoid `N + 1` queries in Rails. You're basically batching all of the things you need in one big query, which is way faster than making a bunch of little queries, since each query has overhead to it.
+
+Check [this](https://css-tricks.com/css-sprites/) guide out for more info.
+
 # 3/10/18 - `Animations`
 
 In gearing up for a front end interview, today I learned about CSS animations for the first time.
