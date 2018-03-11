@@ -1,3 +1,21 @@
+# 3/10/18 - `Pseudo-classes`
+
+I've been using CSS pseudo-classes for a while, but never knew they were actually called pseudo-classes until just now. A `pseudo-class` is a keyword you can add to the end of a CSS selector that allows you to give it certain properties when it's that state. For example:
+
+```
+div:hover {
+  cursor: pointer;
+}
+```
+
+This will change the mouse to the hand looking thing whenever your mouse is hovering over the `div`.
+
+Some other ones I've used before are:
+- `:first-child`
+- `:last-child`
+- `:disabled`
+- `:active`
+
 # 3/10/18 - `Sprites`
 
 Learned a pretty cool way to boost performance using CSS Sprites today. Say you had a website that had a bunch of images. Well to load each of one those images it would normally have to make a separate HTTP request for each image. Making multiple requests can take a long time.
