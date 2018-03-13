@@ -1,6 +1,10 @@
 # 3/12/18
 
-Come back later and add entry about closures. Really good article https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures. 
+Come back later and add entry about closures. Really good article https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures.
+
+Quick note - A closure is a combination of a function and its `lexical environment`.
+
+The `lexical environment` is basically the variables that were available, or in-scope, at the time the function was declared.
 
 # 2/24/18 - `.push` vs `.push.apply`
 
