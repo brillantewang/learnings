@@ -1,3 +1,7 @@
+# 3/12/18
+
+Come back later and add entry about closures. Really good article https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures. 
+
 # 2/24/18 - `.push` vs `.push.apply`
 
 Today I learned about why you might want to use `push.apply`, rather than just `.push`. `.push` only allows for pushing in a single item, whereas `push.apply` allows you to push in an entire array of items (all as separate items). So for example, you could do something like:
