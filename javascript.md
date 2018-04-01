@@ -11,6 +11,8 @@ Today I started JavaScript30 in preparation for my upcoming internship. These ar
 - `data` attributes for HTML elements
   - At some point people started making up their own attribute names for HTML elements. So then we decided to create `data` attributes, which basically allow you to create any attribute you want as long as you put it after `data-`. It's basically so you can store metadata on any HTML element.
 
+This was also the first time I've ever written JavaScript directly into an HTML file. Kinda cool!
+
 # 3/12/18
 
 Come back later and add entry about closures. Really good article https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures.
