@@ -1,3 +1,16 @@
+# 4/1/18 - JavaScript30 Day1 Drumkit
+
+Today I started JavaScript30 in preparation for my upcoming internship. These are what I learned from the drumkit exercise:
+
+- `keydown` event
+  - This is pretty awesome in that you can listen for whenever the user presses a key. The event object gives back a lot of useful properties such as `event.keyCode` which tells you the code of which key they pressed.
+- `transitionend` event
+  - This allows you to listen for whenever the CSS for an HTML element has finished its transition.
+- `<audio>` HTML elements
+  - These are HTML elements that you can select with something `querySelector` like and use its API. For example, you can use `.play` to play the corresponding audio clip (attached as a `src` property to the `<audio>` element).
+- `data` attributes for HTML elements
+  - At some point people started making up their own attribute names for HTML elements. So then we decided to create `data` attributes, which basically allow you to create any attribute you want as long as you put it after `data-`. It's basically so you can store metadata on any HTML element.
+
 # 3/12/18
 
 Come back later and add entry about closures. Really good article https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures.
