@@ -1,3 +1,19 @@
+# 4/1/18 - JavaScript30 Day 2 Clock
+
+Today I learned how to use JavaScript to modify an HTML element's CSS. You select the element, and then use:
+
+`[INSERT ELEMENT HERE].style.[INSERT ATTRIBUTE HERE] = [INSERT VALUE HERE]`.
+
+So for example, if I want to rotate an element, I could do:
+
+```
+let secondHand = document.querySelector(".second-hand");
+
+secondHand.style.transform = "rotate(45deg)";
+```
+
+This is really powerful when used with the `transition` CSS attribute.
+
 # 4/1/18 - JavaScript30 Day1 Drumkit
 
 Today I started JavaScript30 in preparation for my upcoming internship. These are what I learned from the drumkit exercise:
