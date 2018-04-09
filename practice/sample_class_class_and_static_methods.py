@@ -41,3 +41,5 @@ print emp3.__dict__
 import datetime
 date = datetime.date(2018, 1, 10)
 print Employee.is_workday(date)
+
+#tutorial from https://www.youtube.com/watch?v=rq8cL2XMM5M
